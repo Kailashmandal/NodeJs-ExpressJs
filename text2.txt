@@ -1,0 +1,2 @@
+This is an apple 🍎 and this is an orange 🍊 both are differant .
+This is just testing of reading file ansynchronously.
