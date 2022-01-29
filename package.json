@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-expressjs-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kailashmandal/NodeJs-ExpressJs.git"
+  },
+  "author": "kailash mandal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kailashmandal/NodeJs-ExpressJs/issues"
+  },
+  "homepage": "https://github.com/Kailashmandal/NodeJs-ExpressJs#readme"
+}
