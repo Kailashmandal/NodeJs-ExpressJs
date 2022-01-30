@@ -1,6 +1,9 @@
 const fs = require('fs');
 const http =require('http');
-const url= require('url')
+const url= require('url');
+// requiring 3rd party module that we have installed like sulgify 
+const sulgify= require('slugify');
+const replaceTemplate= require('./starter/modules/replaceTemplate');
 /**
  *  for deploying this on heroku -
  *  port should be : process.env.PORT
@@ -30,7 +33,8 @@ const tempProduct =fs.readFileSync('./starter/templates/template-product.html' ,
 // parsing data.json into js array that contains object of product details
 const dataObj= JSON.parse(data);
 
-
+// we are now importing the replaceTemplate as module
+/*
 const replaceTemplate=(temp , product)=>{
   // replacing each place holder of a card with their value
     let output= temp.replace(/{%PRODUCTNAME%}/g , product.productName);
@@ -49,7 +53,14 @@ const replaceTemplate=(temp , product)=>{
 
     return output;
 } 
+*/
 
+/**
+ *  working with sulgify :changing ecah product name of present in data.json to lower case 
+ *  and saving it in an array. 
+ */ 
+const slugs= dataObj.map(el => sulgify(el.productName , {lower : true}));
+console.log(slugs);
 
 // OUR SERVER
 const server = http.createServer( (req, res)=>{
@@ -137,4 +148,26 @@ server.listen(port ,host , ()=>{
     console.log('Listening to request on port 8000.');
 })
 
-
+/**
+ *  we can run this file by commands : 
+ *     1. node index
+ *     2. node index.js
+ *    
+ *   configure script to start index.js in package.json : 
+ *     "scripts": {
+           "start": "node index.js"
+        }
+           OR
+           "scripts": {
+              "start": "nodemon index.js"
+        }
+ *  
+ *  if we have nodemon installed globally use : 
+ *     3. nodemon index.js
+ *    or 4. nodemon index
+ * 
+ *  if start excution is et-up in package.json then use : 
+ *    5. npm run start 
+ *  or start is special you can use simple 
+ *   6. npm start  
+ */

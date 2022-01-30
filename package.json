@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Kailashmandal/NodeJs-ExpressJs/issues"
   },
-  "homepage": "https://github.com/Kailashmandal/NodeJs-ExpressJs#readme"
+  "homepage": "https://github.com/Kailashmandal/NodeJs-ExpressJs#readme",
+  "dependencies": {
+    "slugify": "^1.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }

@@ -1,0 +1,52 @@
+simple or regular depandencies : are packages that contains some code that we use in our code
+or code upon which our code depandes called regular depandacies.like
+ 'sulgify' is used to create more readable urls
+
+    command to install : npm install slugify
+    in terminal will install sulgify instantly.
+
+dev-depandancies : used for development for examle : code bundler webpack ,debugbugger tool , 
+or test library.
+example : nodemon : used to restarting server agin automatically whenever there is change in any we
+working file .
+
+   command to specify that it is dev-dependency : 
+                     npm install nodemon --save-dev
+
+global depandencies tool : with npm we can have global install and it will 
+run in all floder of your machine .
+ command : 
+   npm install nodemon --global
+    OR 
+  npm i nodemon --global 
+
+ now it will install globally and we can use in any working folder  
+ .
+
+
+ ** versioning the packages : 
+ ** downloading a specific version : 
+       npm i package@version
+
+       example : npm i slugify@1.0.0 
+
+ ** see outdated packages : 
+       command :   npm outdated      
+will give table of outdated version packages for example : 
+
+ Package  Current  Wanted  Latest  Location              Depended by
+slugify    1.0.0   1.6.5   1.6.5  node_modules/slugify  NodeJs-ExpressJs-Course
+
+ ** update package:
+  command : npm update <package-name>
+  example : npm update slugify
+
+ ** uninstalling a package
+ command : npm uninstall <package-name> 
+ examle : npm uninstall express
+
+
+ **if our node_module floder is deleted but package.json is present 
+  just use this command : npm install 
+  it will install all node_modules
+ 
